@@ -1,0 +1,8 @@
+{
+    "version": 2,
+    "name": "meme-as-service",
+    "builds": [
+        { "src": "index.js", "use": "@now/node" },
+        { "src": "fonts/**", "use": "@now/static" }
+    ]
+}
