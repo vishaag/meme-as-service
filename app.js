@@ -1,17 +1,22 @@
 let http = require('http');
 let Jimp = require('jimp');
 let fs = require('fs');
+const { parse } = require('querystring');
+const { text } = require('micro')
 
 
 const hostname = '127.0.0.1';
 const port = 3000;
 
 const server = http.createServer((req, res) => {
+
+
   Jimp.read('./philosoraptor.jpg')
   .then(image => {
-    Jimp.loadFont(Jimp.FONT_SANS_64_WHITE).then(font => {
-      image.print(font, 10, 10, 'Hello worlds!');
-      image.print(font, 10, 300, 'Hello worlds!');
+    Jimp.loadFont(Jimp.FONT_SANS_32_WHITE).then(font => {
+      console.log(Jimp.FONT_SANS_32_WHITE);
+      image.print(font, 10, 10, 'Hey!');
+      // image.print(font, 10, 300, 'Hello worlds!Hello worlds!');
       image.write('phil.jpg', 
         function () {
           img = fs.readFileSync('phil.jpg');
