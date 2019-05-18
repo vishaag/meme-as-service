@@ -1,7 +1,5 @@
-const http = require('http');
-var Jimp = require('jimp');
-fs = require('fs');
-
+let Jimp = require('jimp');
+let fs = require('fs');
 
 module.exports = (req, res) => {
   Jimp.read(__dirname + '/philosoraptor.jpg')

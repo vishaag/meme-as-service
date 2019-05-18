@@ -1,6 +1,6 @@
-const http = require('http');
-var Jimp = require('jimp');
-fs = require('fs');
+let http = require('http');
+let Jimp = require('jimp');
+let fs = require('fs');
 
 
 const hostname = '127.0.0.1';
